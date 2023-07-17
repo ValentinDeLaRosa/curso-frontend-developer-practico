@@ -31,6 +31,7 @@ function toggleMobileMenu() {
         shoppingCartContainer.classList.add('inactive');
     }
     mobileMenu.classList.toggle('inactive');
+    closeProductDetailAside();
 }
 
 function toggleCartMenu() {
@@ -105,21 +106,43 @@ function closeProductDetailAside() {
 
 
 const productList = [];
-productList.push({
-    name: 'Bike',
-    price: 120,
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
-productList.push({
-    name: 'Screen',
-    price: 1200,
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
-productList.push({
-    name: 'Laptop',
-    price: 1500,
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
+function itemAdder(argName, argPrice, argImageURL) {
+    productList.push({
+        name: argName,
+        price: argPrice,
+        image: argImageURL
+    })
+    }
+
+itemAdder('Bike', 120, 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+itemAdder('Laptop', 1000, 'https://media.wired.com/photos/6425ef2984ccb2dd1d2ac6cb/16:9/w_2399,h_1349,c_limit/asuszenbooks13oled_GEAR-Featured.jpg');
+itemAdder('TV', 1500, 'https://www.sony.com.co/image/d4f672c8c1b08401c3fb67cce747b7db?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320');
+itemAdder('Mouse', 15, 'https://liquimarcas.co/wp-content/uploads/2021/05/mouse-gamer-usb-havit-ms1018-1.jpg');
+itemAdder('Keyboard', 100, 'https://panamericana.vtexassets.com/arquivos/ids/379780/teclado-gaming-havit-retroiluminado-kb500l-1-6939119030117.jpg?v=637479943182670000');
+
+
+
+
+// productList.push({
+//     name: 'Bike',
+//     price: 120,
+//     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+// })
+// productList.push({
+//     name: 'Screen',
+//     price: 1200,
+//     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+// })
+// productList.push({
+//     name: 'Laptop',
+//     price: 1500,
+//     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+// })
+// productList.push({
+//     name: 'Laptop',
+//     price: 1500,
+//     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+// })
 
 {/* <div class="product-card">
         <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
